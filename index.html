@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saika Augustin | Portfolio</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0077ff;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0055cc;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        header {
+            background: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #222;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #555;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #0077ff;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 0 80px 0;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: #111;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto 25px auto;
+        }
+
+        .badge {
+            background-color: #0077ff;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 0;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            color: #222;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: #0077ff;
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        /* Experience Section */
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .exp-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid #0077ff;
+            transition: transform 0.3s ease;
+        }
+
+        .exp-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .exp-card h3 {
+            font-size: 1.25rem;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .project-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: #111;
+        }
+
+        .project-info p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #222;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: #0077ff;
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: #ccc;
+            text-align: center;
+            padding: 40px 0;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Can be expanded with JS for mobile menu */
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav">
+            <div class="logo">Saika Augustin</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero" id="about">
+        <div class="container">
+            <span class="badge">Welcome to my Portfolio</span>
+            <h1>Hi, I'm Saika Augustin</h1>
+            <p>I am a 19-year-old student originally from Haiti, currently attending the <strong>Cambridge Rindge and Latin School</strong>. I am passionate about technology, design, innovation, and exploring new academic horizons.</p>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2>Work Experience</h2>
+            <div class="timeline">
+                <div class="exp-card">
+                    <h3>Innovators for Purpose (iFp)</h3>
+                    <p>Collaborated on creative technology and design thinking initiatives aimed at solving real-world challenges.</p>
+                </div>
+                <div class="exp-card">
+                    <h3>Summer Discovery</h3>
+                    <p>Engaged in enrichment experiences, developing critical leadership and academic skills over the summer.</p>
+                </div>
+                <div class="exp-card">
+                    <h3>Burlington</h3>
+                    <p>Gained valuable customer service, teamwork, and operational experience in a fast-paced retail environment.</p>
+                </div>
+                <div class="exp-card">
+                    <h3>Babysitting</h3>
+                    <p>Demonstrated leadership, time management, and trusted responsibility providing dedicated childcare.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" style="background-color: #f1f3f5;">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Jeopardy Web Project</h3>
+                        <p>A dynamic web-based implementation of the classic Jeopardy trivia game, built collaboratively during my time at Innovators for Purpose.</p>
+                    </div>
+                    <a href="https://github.com/Innovators-for-Purpose/Jeopardy-Project" target="_blank" class="btn">View Code on GitHub</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Malware Study Project</h3>
+                        <p>An educational cybersecurity code analysis project focusing on security patterns and system defenses (developed strictly for study purposes).</p>
+                    </div>
+                    <a href="https://github.com/27saugustin-collab/mangoCodeChange" target="_blank" class="btn">View Code on GitHub</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Intelligent Chatbot Project</h3>
+                        <p>Designed and built an interactive conversational chatbot program to practice user interface design and automated responses.</p>
+                    </div>
+                    <span class="btn" style="background:#bbb; cursor:default; hover:none;">Local Project</span>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Business Innovation Project</h3>
+                        <p>Developed an entrepreneurial business concept plan detailing market research, strategy, and project viability layouts.</p>
+                    </div>
+                    <span class="btn" style="background:#bbb; cursor:default; hover:none;">Local Project</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Saika Augustin. All rights reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.8rem; color: #777;">Cambridge Rindge and Latin School student | Proudly from Haiti</p>
+        </div>
+    </footer>
+
+</body>
+</html>
